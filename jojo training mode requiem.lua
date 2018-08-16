@@ -656,41 +656,41 @@ function guiWriter() -- Writes the GUI
 			tempTable=inputHistoryTableP2[i]
 			buttonOffset=0
 			if (tempTable-160)>=0 then --A
-				gui.text(xP2+offset*4,yP2-1-((11)*i),"A",inputHistoryA)
+				gui.text(xP2+offset*4,yP2-1-((11)*i*scroll),"A",inputHistoryA)
 				tempTable = tempTable-160
 				buttonOffset=buttonOffset+6
 			end	
 			if (tempTable-80)>=0 then --B
-				gui.text(xP2+offset*4+buttonOffset,yP2-1-((11)*i),"B",inputHistoryB)
+				gui.text(xP2+offset*4+buttonOffset,yP2-1-((11)*i*scroll),"B",inputHistoryB)
 				tempTable = tempTable-80
 				buttonOffset=buttonOffset+6
 			end
 			if (tempTable-40)>=0 then --C
-				gui.text(xP2+offset*4+buttonOffset,yP2-1-((11)*i),"C",inputHistoryC)
+				gui.text(xP2+offset*4+buttonOffset,yP2-1-((11)*i*scroll),"C",inputHistoryC)
 				tempTable = tempTable-40
 				buttonOffset=buttonOffset+6
 			end
 			if (tempTable-20)>=0 then --S
-				gui.text(xP2+offset*4+buttonOffset,yP2-1-((11)*i),"S",inputHistoryS)
+				gui.text(xP2+offset*4+buttonOffset,yP2-1-((11)*i*scroll),"S",inputHistoryS)
 				tempTable = tempTable-20
 			end
 			if (tempTable<20 and not(tempTable<=0)) then
-				drawDpad(xP2,yP2-((11)*i),offset)
+				drawDpad(xP2,yP2-((11)*i*scroll),offset)
 			end
 			if (tempTable-10)>=0 then --Up
-				gui.box(xP2+offset+1, yP2-(11*i), xP2+offset*2-1, yP2-offset+1-(11*i),"red")
+				gui.box(xP2+offset+1, yP2-(11*i*scroll), xP2+offset*2-1, yP2-offset+1-(11*i*scroll),"red")
 				tempTable = tempTable-10
 			end	
 			if (tempTable-5)>=0 then --Right
-				gui.box(xP2+offset*2, yP2+1-(11*i), xP2+offset*3-1, yP2+offset-1-(11*i),"red")
+				gui.box(xP2+offset*2, yP2+1-(11*i*scroll), xP2+offset*3-1, yP2+offset-1-(11*i*scroll),"red")
 				tempTable = tempTable-5
 			end
 			if (tempTable-3)>=0 then --Down
-				gui.box(xP2+offset+1, yP2+offset-(11*i), xP2+offset*2-1, yP2+offset*2-(11*i)-1,"red")
+				gui.box(xP2+offset+1, yP2+offset-(11*i*scroll), xP2+offset*2-1, yP2+offset*2-(11*i*scroll)-1,"red")
 				tempTable = tempTable-3
 			end
 			if (tempTable-1)>=0 then --Left
-				gui.box(xP2+1, yP2+1-(11*i), xP2+offset, yP2+offset-1-(11*i),"red")
+				gui.box(xP2+1, yP2+1-(11*i*scroll), xP2+offset, yP2+offset-1-(11*i*scroll),"red")
 			end
 		end
 	end
